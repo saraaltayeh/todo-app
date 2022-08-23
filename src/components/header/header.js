@@ -1,16 +1,17 @@
 import React from 'react';
-import { Navbar, Alignment } from '@blueprintjs/core';
-
-import './header.css'
 
 const Header = () => {
 return (
-    <Navbar>
-    <Navbar.Group align={Alignment.LEFT}>
-        <Navbar.Heading>ToDo App</Navbar.Heading>
-        <Navbar.Divider />
-    </Navbar.Group>
-    </Navbar>
+    <nav className="bp4-navbar .modifier">
+    <div className="bp4-navbar-group bp4-align-left">
+      <div className="bp4-navbar-heading">TO DO</div>
+      <input className="bp4-input" placeholder="Search files..." type="text" />
+    </div>
+    <div className="bp4-navbar-group bp4-align-right">
+      <button className="bp4-button bp4-minimal bp4-icon-home">Home</button>
+      <button className="bp4-button bp4-minimal bp4-icon-document">Files</button>
+    </div>
+  </nav>
 )
 }
 
