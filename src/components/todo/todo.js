@@ -79,12 +79,12 @@ const ToDo = () => {
         <h1>To Do List: {incomplete.length} items pending</h1>
       </header>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="f">
 
         <h2>Add To Do Item</h2>
 <label>
           <span>To Do Item</span>
-          <input
+          <input className="bp4-input"
             onChange={handleChange}
             name="text"
             type="text"
@@ -94,7 +94,7 @@ const ToDo = () => {
 
         <Label>
           <span>Assigned To</span>
-          <input
+          <input className="bp4-input"
             onChange={handleChange}
             name="assignee"
             type="text"
@@ -114,16 +114,13 @@ const ToDo = () => {
           />
         </Label>
         <Label>
-          <Button type="submit">Add Item</Button>
-        </Label>
-        <Label>
-          <Switch onChange={handleHide}> Hide Completed Tasks </Switch>
+          <Button className=".bp4-minimal" type="submit">Add Item</Button>
         </Label>
       </form>
 
       {pagination().map(item => (
 
-<div key={item.id}>
+<div key={item.id} interactive={true} class="bp4-elevation-4">
 {settings.hide === false || item.complete === false ? (
             <>
               <p>Item: {item.text}</p>
@@ -142,8 +139,9 @@ const ToDo = () => {
           ) : null}
         </div>
       ))}
-  <Button onClick={handlePrevious}>Previous</Button>
-      <Button onClick={handleNext}>NEXT</Button>
+      <br/>
+  <Button className=".bp4-minimal" onClick={handlePrevious}>Previous</Button>
+      <Button className=".bp4-minimal" onClick={handleNext}>NEXT</Button>
     </>
   );
 };

@@ -1,25 +1,20 @@
-import React, {useState } from 'react';
+import React,{useContext} from 'react';
 
 export const SettingsContext = React.createContext();
 
 function Settings(props) {
-    let [hide, setHide] = useState(false);
-    let [numItems, setNumItems] = useState(3);
-    let [sort, setSort] = useState('');
-
-    return ( <SettingsContext.Provider value = {
-            {
-                hide,
-                numItems,
-                sort,
-                setHide,
-                setNumItems,
-                setSort
-            }
-        } >
-        {
-            props.children
-        } </SettingsContext.Provider>
+    const state={
+        count:4,
+        sortField:"string",
+        showCompleted:true,
+        toggleShow:()=>{ state.showCompleted=!state.showCompleted;  }
+    }
+    return ( 
+        <>
+        <SettingsContext.Provider value={state}>
+        {props.children}
+        </SettingsContext.Provider>
+        </>
     );
 }
 
