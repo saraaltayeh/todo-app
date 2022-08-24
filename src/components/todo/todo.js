@@ -82,23 +82,24 @@ const ToDo = () => {
       <form onSubmit={handleSubmit} id="f">
 
         <h2>Add To Do Item</h2>
-<label>
+      <label>
           <span>To Do Item</span>
+          <br/>
           <input className="bp4-input"
             onChange={handleChange}
             name="text"
             type="text"
             placeholder="Item Details"
           />
-</label>
+      </label>
 
         <Label>
           <span>Assigned To</span>
           <input className="bp4-input"
             onChange={handleChange}
-            name="assignee"
+            name="assigne"
             type="text"
-            placeholder="Assignee Name"
+            placeholder="Assigne Name"
           />
         </Label>
 
