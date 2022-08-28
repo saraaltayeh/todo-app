@@ -1,15 +1,40 @@
-export default function todoCard(item)
-{console.log({item});
-    return(
-        <div key={item.id}>
-        <p>{item.text}</p>
-        <p>
-          <small>Assigned to: {item.assignee}</small>
-        </p>
-        <p>
-          <small>Difficulty: {item.difficulty}</small>
-        </p>
-        <hr />
-      </div>
-    )
-}
+import React from "react";
+import { Button, Card, Elevation } from "@blueprintjs/core";
+
+const TodoCard = (props) => {
+  return (
+    <div>
+      {" "}
+      <Card className="mainItem2">
+        <h3 className="list">Items List</h3>
+        {props.arrayComplete.map((item) => (
+          <Card
+            className="listCard"
+            interactive={true}
+            elevation={Elevation.THREE}
+            key={item.id}
+          >
+            <h3>
+              <b>{item.text} </b>
+            </h3>
+            <p>
+              <b>Assigned to</b> : {item.assignee}
+            </p>
+            <p>
+              <b>Difficulty</b> : {item.difficulty}
+            </p>
+            <Button className="@ns-button bp3-intent-success"
+              type="button"
+              
+              onClick={() => props.toggleComplete(item.id)}
+            >
+              Complete : True
+            </Button>
+          </Card>
+        ))}
+      </Card>
+    </div>
+  );
+};
+
+export default TodoCard;
