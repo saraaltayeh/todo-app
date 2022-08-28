@@ -24,6 +24,7 @@
   "homepage": "https://saraaltayeh.github.io/todo-app",
   "dependencies": {
     "@blueprintjs/core": "^4.9.0",
+    "bootstrap": "^5.2.0",
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
