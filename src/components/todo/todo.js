@@ -60,7 +60,6 @@ const ToDo = () => {
     console.log(arr);
   }
 
-  
   return (
    <div className="main">
       <h3 id='h2'>To Do List Manager: ({incomplete.length}) To-Do | ({list.length - incomplete.length}) completed</h3>
