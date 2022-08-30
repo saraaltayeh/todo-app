@@ -8,7 +8,7 @@ import Header from './components/header/header';
 import ToDo from './components/todo/todo.js';
 import Settings from './components/context/settings';
 import SignupForm from './components/signup'
-import LoginForm from './components/login';
+import LoginForm from './components/login/login';
 import LoginProvider from "./components/context/loginContext";
 export default class App extends React.Component {
   render() {
@@ -19,7 +19,7 @@ export default class App extends React.Component {
       <Settings>
       <Header/>
         <Routes>
-      <Route path="/" element={ [<LoginForm></LoginForm>, <ToDo />]}/>
+      <Route path="/" element={ [ <LoginForm></LoginForm>, <ToDo />]}/>
       <Route path="/signUp" element={<SignupForm/>}/>
       </Routes>
       </Settings>

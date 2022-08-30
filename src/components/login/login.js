@@ -1,8 +1,8 @@
 
     import React, { useContext, useState } from "react";
-    // import "./todo/login.scss"
+    import "./login.css"
     import { Button } from '@blueprintjs/core';
-    import { LoginContext } from "./context/loginContext";
+    import { LoginContext } from "../context/loginContext";
     import { When } from "react-if";
     
     export default function LoginForm(props) {

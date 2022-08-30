@@ -1,6 +1,6 @@
-import React, { useContext, useState ,useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-    // import "./todo/login.scss"
+    import "./login/login.css"
     // import { Navbar, Alignment, Button } from '@blueprintjs/core';
     import { LoginContext } from "./context/loginContext";
     import Header from './header/header.js'
@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
       const [username, setUsername] = useState("");
       const [password, setPassword] = useState();
       const [role, setRole] = useState('user');
-      /////////submit/////////////////
+
       const handleSubmit = (e) => {
         e.preventDefault();
         if(username && password) {

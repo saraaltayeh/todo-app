@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .container {
+    background: linear-gradient(
+        90deg,
+        #FF87B2 0%,
+        #FFE898 100%
+      );
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .app-wrapper {
+  background-color: #FFF8BC;
+  min-width: 350px;
+  min-height: 650px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  
+  }
+  .tittle {
+    color: #F65A83;
+    text-align: center;
+    margin: 80px,0px,40px,0px;
+  }
+  
+  .name,
+  .email,
+  .password {
+  margin: 20px;
+  color: rgb(10, 11, 11);
+  font-size: 20px;
+  }
+  .password {
+    margin-bottom: 40px;
+  }
+  
+  .input {
+    height: 32px;
+    font-size: 20px;
+    outline: none;
+    width: 100%;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: 2px solid black;
+    margin-bottom: 10px;
+  
+  }
+  
+  .error {
+    color: rgb(255, 128, 0);
+  }
+  
+  .submit{
+    display: flex;
+    font-size: 30px;
+    border-radius: 15px;
+    color: white;
+    padding: 30px,60px;
+    background: #F65A83;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px , rgba(0, 0, 0, 0.22) 0px 22px 12px;
+    margin: auto;
+    outline: none;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all .1s;
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  .form-success {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    min-width: 370px;
+    color: #F65A83(171, 81, 81);
+  }
