@@ -2,14 +2,27 @@ import React, { useState, useEffect } from 'react';
 export const settingsContext = React.createContext();
 
 export default function settings(props) {
-  const [itemsPerPage, setItemsPerPage] = useState(2);
-  const [sort, setSort] = useState('Ascending');
-  const [show, setShow] = useState(false);
-  const state = { show, setShow, itemsPerPage, setItemsPerPage, sort, setSort, }; 
-  useEffect(() => { let stringArray = localStorage.getItem("Form"); 
-  let objectArray = JSON.parse(stringArray); 
-  if (objectArray) { setItemsPerPage(Number(objectArray.itemsPerPage)); } 
-  localStorage.clear(); }, []);
+  const [show, setShow] = useState(true);
+  const [itemPage,setItemPage]=useState(3)
 
-  return <settingsContext.Provider value={state}>{props.children}</settingsContext.Provider>;
+  const state = {
+      show:show,
+      setShow:setShow,
+      itemPage:itemPage,
+      setItemPage:setItemPage,
+  }
+
+  useEffect(()=>{
+    let result = JSON.parse(localStorage.getItem('settings'));
+    console.log(result,"111111111")
+    if(result){
+        setShow(result.show);
+        setItemPage(Number(result.itemPage));
+    }
+},[])
+  return (
+  <settingsContext.Provider value={state}>
+    {props.children}
+    </settingsContext.Provider>
+  )
 }
