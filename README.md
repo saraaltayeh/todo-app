@@ -19,4 +19,8 @@ React Hook Form takes a slightly different approach than other form libraries in
 3. useEffect
 4. useForm
 
+## UML
+
+![uml](./assets/todouml.png)
+
 ## [Netlify](https://saraaltayeh.github.io/todo-app/)
