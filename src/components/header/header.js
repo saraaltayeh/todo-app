@@ -1,18 +1,25 @@
 import React from 'react';
+import { Navbar, Alignment, Button } from '@blueprintjs/core';
+import { useNavigate } from 'react-router-dom';
+export default function Header ()  {
 
-const Header = () => {
-return (
-    <nav className="bp4-navbar .modifier">
-    <div className="bp4-navbar-group bp4-align-left">
-      <div className="bp4-navbar-heading">TO DO</div>
-      <input className="bp4-input" placeholder="Search files..." type="text" />
-    </div>
-    <div className="bp4-navbar-group bp4-align-right">
-      <button className="bp4-button bp4-minimal bp4-icon-home">Home</button>
-      <button className="bp4-button bp4-minimal bp4-icon-document">Files</button>
-    </div>
-  </nav>
-)
+   let navigate=useNavigate()
+        return (
+            <header>
+<Navbar>
+    <Navbar.Group style={{backgroundColor:"skyblue"}} align={Alignment.LEFT}>
+        <Navbar.Heading>   </Navbar.Heading>
+        <Navbar.Divider />
+        <Button onClick={()=>{navigate("/")}} className="bp4-minimal" icon="home" text="Home" />
+        <Button onClick={()=>{navigate("/file")}} className="bp4-minimal" icon="document" text="Files" />
+        <Button onClick={()=>{navigate("/about")}}  className="bp4-minimal" icon="chat" text="Contact" />
+        <Button onClick={()=>{navigate("/signUp")}}  className="bp4-minimal" icon="login" text="signUp" />
+        
+    </Navbar.Group>
+    
+</Navbar>
+
+</header>
+        )
+    
 }
-
-export default Header;
